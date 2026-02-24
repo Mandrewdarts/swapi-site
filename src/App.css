@@ -39,7 +39,10 @@
   border: 1px solid var(--border);
   border-radius: 4px;
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .tab:hover {
@@ -116,7 +119,9 @@
   border: 1px solid var(--border);
   border-radius: 4px;
   cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .btn:hover:not(:disabled) {
@@ -150,7 +155,10 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .resource-card:hover {
@@ -211,81 +219,6 @@
   color: var(--text);
 }
 
-/* Films */
-.films-section {
-  margin-top: 0;
-}
-
-.films-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-.film-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.film-card:hover {
-  border-color: var(--accent-dim);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-}
-
-.film-card__header {
-  margin-bottom: 1rem;
-}
-
-.film-card__episode {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 0.75rem;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-}
-
-.film-card__title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0.25rem 0;
-}
-
-.film-card__date {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.film-card__crawl {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  margin: 0 0 1rem 0;
-}
-
-.film-card__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 0;
-}
-
-.film-card__meta > div {
-  display: flex;
-  gap: 0.35rem;
-}
-
-.film-card__meta dt {
-  color: var(--text-muted);
-  margin: 0;
-}
-
-.film-card__meta dd {
-  margin: 0;
-}
-
 /* Skeletons */
 .skeleton-card {
   background: var(--bg-card);
@@ -304,8 +237,13 @@
 }
 
 @keyframes skeleton-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 /* Error */

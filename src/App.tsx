@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-import { PeopleGallery } from './components/PeopleGallery'
-import { PlanetsGrid } from './components/PlanetCard'
-import { FilmsList } from './components/FilmCard'
-import { VehiclesGrid } from './components/VehicleCard'
+import { useState } from 'react';
+import './App.css';
+import { PeopleGallery } from './components/PeopleGallery';
+import { PlanetsGrid } from './components/PlanetCard';
+import { VehiclesGrid } from './components/VehicleCard';
 
-type Tab = 'people' | 'planets' | 'films' | 'vehicles'
+type Tab = 'people' | 'planets' | 'vehicles';
 
 function App() {
-  const [tab, setTab] = useState<Tab>('people')
+  const [tab, setTab] = useState<Tab>('people');
 
   return (
     <div className="app">
@@ -28,12 +27,6 @@ function App() {
             Planets
           </button>
           <button
-            className={`tab ${tab === 'films' ? 'tab--active' : ''}`}
-            onClick={() => setTab('films')}
-          >
-            Films
-          </button>
-          <button
             className={`tab ${tab === 'vehicles' ? 'tab--active' : ''}`}
             onClick={() => setTab('vehicles')}
           >
@@ -44,11 +37,10 @@ function App() {
       <main className="app-main">
         {tab === 'people' && <PeopleGallery />}
         {tab === 'planets' && <PlanetsGrid />}
-        {tab === 'films' && <FilmsList />}
         {tab === 'vehicles' && <VehiclesGrid />}
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
